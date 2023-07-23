@@ -1,0 +1,151 @@
+.tableBg {
+}
+
+.bet {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  top: 50px;
+
+  .outFrame {
+    width: 100%;
+    border: 3px solid limegreen;
+    border-bottom: unset;
+    box-shadow: 3px 0 10px 0px;
+
+    .chip {
+      background-color: rgb(196, 57, 57) !important;
+      position: absolute;
+      bottom: -400px;
+      right: 300px;
+    }
+
+    #chip {
+      display: none;
+    }
+
+    .inFrame {
+      display: flex;
+      // justify-content: space-around;
+      border-bottom: 3px solid rgb(85, 138, 85);
+      box-shadow: 0px 8px 10px -8px;
+    }
+    .up {
+      .betCode {
+        width: 33.3%;
+      }
+    }
+    .down {
+      //   border-bottom: 3px solid olivedrab;
+      //   box-shadow: 5px 0 10px -5px;
+      .betCode {
+        width: 50%;
+      }
+    }
+    .betCode {
+      text-align: center;
+      padding: 50px;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 30px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .rightLine {
+      border-right: 3px solid olivedrab;
+      box-shadow: 5px 0 10px -5px #000000;
+    }
+  }
+}
+
+#circleBorder {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border: 5px solid #000000;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 5px #ffffff;
+}
+.moveToBP {
+  animation: upLeft 1s ease-out forwards;
+}
+.moveToT {
+  animation: upMiddle 1s ease-out forwards;
+}
+.moveToPP {
+  animation: upRight 1s ease-out forwards;
+}
+.moveToB {
+  animation: downLeft 1s ease-out forwards;
+}
+.moveToP {
+  animation: downRight 1s ease-out forwards;
+}
+
+// @keyframes circle{
+//   0% {
+//     opacity: 0;
+//   }
+//   50%{
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+@keyframes upLeft {
+  0% {
+    bottom: -400px;
+    right: 300px;
+  }
+  100% {
+    bottom: 150px;
+    right: 718px;
+  }
+}
+
+@keyframes upMiddle {
+  0% {
+    bottom: -400px;
+    right: 300px;
+  }
+  100% {
+    bottom: 150px;
+    right: 413px;
+  }
+}
+
+@keyframes upRight {
+  0% {
+    bottom: -400px;
+    right: 300px;
+  }
+  100% {
+    bottom: 150px;
+    right: 96px;
+  }
+}
+
+@keyframes downLeft {
+  0% {
+    bottom: -400px;
+    right: 300px;
+  }
+  100% {
+    bottom: 8px;
+    right: 635px;
+  }
+}
+
+@keyframes downRight {
+  0% {
+    bottom: -400px;
+    right: 300px;
+  }
+  100% {
+    bottom: 8px;
+    right: 175px;
+  }
+}
